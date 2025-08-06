@@ -1,0 +1,62 @@
+/* variables */
+/* colors */
+$header-color: #fcffa8;
+$background-color: #fcfcfc;
+$black: #000;
+$white: #fff;
+$light-text: #2e2e2e;
+$shadow: rgba(0, 0, 0, 0.3);
+
+/* fonts */
+$font-stack: 'Arial', sans-serif;
+
+/* placeholder */
+%hoverLink {
+    text-decoration: underline;
+}
+
+/* mixins */
+//mixin för grid
+@mixin grid ($height, $columns: 2) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    height: $height;
+}
+
+//mixin för textbox
+@mixin textBox($width, $padding, $margin, $box-shadow: 0, $border: 0) {
+    width: $width;
+    margin: $margin;
+    padding: $padding;
+    box-shadow: $box-shadow;
+
+    @if $border !=0 {
+        border: $border;
+    }
+
+    @if $box-shadow !=0 {
+        box-shadow: $box-shadow;
+    }
+}
+
+//mixin för knappar
+@mixin button($bg-color, $text-color, $witdth, $height, $margin, $max-w, $textalign, $fontsize, $border: false) {
+    @if $border == false {
+        background-color: $bg-color;
+        color: $text-color;
+        border: none;
+
+        &:hover {
+            background-color: #cecf94;
+            color: $black;
+        }
+    }
+
+    width: $witdth;
+    height: $height;
+    margin: $margin;
+    max-width: $max-w;
+    text-align: $textalign;
+    font-size: $fontsize;
+    cursor: pointer;
+}
