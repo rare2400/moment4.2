@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.scss">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <script src="js/main.js" defer></script>
+    <title>CV</title>
+</head>
+
+<body>
+    <div id="delete-message" class="hidden">
+    </div>
+    <header>
+        <div class="h-container">
+            <h1><a href="#">Moment 4</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Logga in</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <h2>Välkommen</h2>
+            <div class="form-container">
+                <h3>Logga in</h3>
+                <form id="login-form" method="post">
+                    <label for="username">Användarnamn:</label>
+                    <input type="text" id="username" class="input-text" name="username" required>
+
+                    <label for="password">Lösenord:</label>
+                    <input type="password" id="password" class="input-text" name="password" required>
+
+                    <div class="btn-row">
+                        <button type="submit" class="btn">Logga in</button>
+                        <button class="btn">Registrera konto</button>
+                    </div>
+                </form>
+            </div>
+
+        </main>
+    </div>
+    <footer>
+        <p>
+            Laborationsuppgift för kursen DT207G, <br> Backend-baserad webbutveckling <br>
+            Copyright &copy; 2025 Ramona Reinholdz
+        </p>
+    </footer>
+
+</body>
+
+</html>
