@@ -1,0 +1,6 @@
+@use "abstracts";
+
+.form-container {
+    @include abstracts.textBox(90%, 1rem 1.5rem, 1rem auto 2rem, 0px 0px 8px 0px abstracts.$shadow, 1px solid abstracts.$shadow);
+    background-color: abstracts.$white;
+}

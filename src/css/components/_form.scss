@@ -1,0 +1,37 @@
+@use "../abstracts";
+
+form {
+    margin: 1rem auto 2rem;
+    max-width: 70%;
+    padding-bottom: 1rem;
+
+
+    .input-text,
+    .submit-btn {
+        height: 2rem;
+        padding: 1rem;
+        margin: 0.5rem auto 1rem;
+        border: 1px solid abstracts.$shadow;
+    }
+
+    select:hover {
+        cursor: pointer;
+    }
+
+    .input-text,
+    textarea {
+        width: 100%;
+    }
+
+    textarea {
+        height: 8rem;
+    }
+
+    select {
+        margin-left: 0;
+    }
+
+    label {
+        text-align: left;
+    }
+}
