@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.scss">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <script src="js/checkAuth.js"></script>
+    <script src="js/addpost.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <title>Registrera konto</title>
+</head>
+
+<body>
+    <div id="delete-message" class="hidden">
+    </div>
+    <header>
+        <div class="h-container">
+            <h1><a href="index.html">Moment 4</a></h1>
+            <nav>
+                <ul id="menu">
+                    <li><a href="login.html">Logga in</a></li>
+                    <li><a href="addpost.html">Skriv inlägg</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <h2>Skriv inlägg</h2>
+            <div class="form-container">
+                <form id="add-post" method="post">
+                    <label for="title">Titel</label>
+                    <input type="text" id="title" class="input-text" name="title">
+
+                    <label for="content">Vad tänker du på?</label>
+                    <textarea id="content" name="content" placeholder="Skriv något..."></textarea>
+
+                    <label for="sign">Signera post</label>
+                    <input type="text" id="sign" class="input-text" name="sign">
+
+                    <div class="btn-row">
+                        <button type="submit" class="btn">Publicera</button>
+                    </div>
+                </form>
+
+                <p id="error-msg"></p>
+            </div>
+
+        </main>
+    </div>
+    <footer>
+        <p>
+            Laborationsuppgift för kursen DT207G, <br> Backend-baserad webbutveckling <br>
+            Copyright &copy; 2025 Ramona Reinholdz
+        </p>
+    </footer>
+
+</body>
+
+</html>
