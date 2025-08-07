@@ -7,20 +7,16 @@ form {
 
 
     .input-text,
-    .submit-btn {
+    textarea {
         height: 2rem;
         padding: 1rem;
         margin: 0.5rem auto 1rem;
         border: 1px solid abstracts.$shadow;
+        width: 100%;
     }
 
     select:hover {
         cursor: pointer;
-    }
-
-    .input-text,
-    textarea {
-        width: 100%;
     }
 
     textarea {
