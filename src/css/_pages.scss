@@ -1,6 +1,27 @@
 @use "abstracts";
 
+#posts {
+    @include abstracts.textBox(90%, 1rem 1.5rem, 1rem auto, 0px 0px 8px 0px abstracts.$shadow, 1px solid abstracts.$shadow);
+    background-color: abstracts.$white;
+
+    p {
+        margin-bottom: 0.3rem;
+    }
+}
+
 .form-container {
     @include abstracts.textBox(90%, 1rem 1.5rem, 1rem auto 2rem, 0px 0px 8px 0px abstracts.$shadow, 1px solid abstracts.$shadow);
     background-color: abstracts.$white;
+}
+
+#ingress {
+    text-align: center;
+    font-weight: 600;
+}
+
+#error-msg {
+    font-size: 0.8rem;
+    color: red;
+    text-align: center;
+    margin-top: 0.3em;
 }
