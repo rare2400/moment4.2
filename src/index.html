@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/main.scss">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <script src="js/main.js" defer></script>
-    <title>CV</title>
+    <title>Logga in</title>
 </head>
 
 <body>
@@ -17,30 +17,22 @@
         <div class="h-container">
             <h1><a href="#">Moment 4</a></h1>
             <nav>
-                <ul>
-                    <li><a href="#">Logga in</a></li>
+                <ul id="menu">
+                    <li><a href="login.html">Logga in</a></li>
+                    <li><a href="register.html">Registrera konto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="container">
         <main>
-            <h2>Välkommen</h2>
-            <div class="form-container">
-                <h3>Logga in</h3>
-                <form id="login-form" method="post">
-                    <label for="username">Användarnamn:</label>
-                    <input type="text" id="username" class="input-text" name="username" required>
-
-                    <label for="password">Lösenord:</label>
-                    <input type="password" id="password" class="input-text" name="password" required>
-
-                    <div class="btn-row">
-                        <button type="submit" class="btn">Logga in</button>
-                        <button class="btn">Registrera konto</button>
-                    </div>
-                </form>
+            <h2>Senaste inläggen</h2>
+            <div class="btn-row">
+                <button type="submit" class="btn">Logga in</button>
+                <p>Redan inloggad?</p>
+                <button type="submit" class="btn">Skriv inlägg här</button>
             </div>
+            <div id="posts"></div>
 
         </main>
     </div>
