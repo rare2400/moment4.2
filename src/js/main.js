@@ -70,16 +70,29 @@ async function displayPosts(data) {
     }
 
     data.forEach(post => {
+        const postBox = document.createElement("div");
+        postBox.classList.add("post-box");
         const title = document.createElement("h3");
         const content = document.createElement("p");
+        const signContentDiv = document.createElement("div");
+        signContentDiv.classList.add("sign-date");
         const sign = document.createElement("p");
+        sign.classList.add("sign");
+        const date = document.createElement("p");
+        date.classList.add("date");
 
         title.textContent = post.title;
         content.textContent = post.content;
-        sign.textContent = `${post.sign} - ${new Date(post.date).toLocaleDateString()}`;
+        sign.textContent = post.sign;
+        date.textContent = new Date(post.createdAt).toLocaleDateString();
 
-        postList.appendChild(title);
-        postList.appendChild(content);
-        postList.appendChild(sign);
+        signContentDiv.appendChild(sign);
+        signContentDiv.appendChild(date);
+
+        postBox.appendChild(title);
+        postBox.appendChild(content);
+        postBox.appendChild(signContentDiv);
+
+        postList.appendChild(postBox);
     });
 }
