@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./css/main.scss">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <script src="js/main.js" defer></script>
-    <title>CV</title>
+    <script src="js/register.js" defer></script>
+    <title>Registrera konto</title>
 </head>
 
 <body>
@@ -17,8 +18,9 @@
         <div class="h-container">
             <h1><a href="index.html">Moment 4</a></h1>
             <nav>
-                <ul>
-                    <li><a href="index.html">Logga in</a></li>
+                <ul id="menu">
+                    <li><a href="login.html">Logga in</a></li>
+                    <li><a href="register.html">Registrera konto</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,23 +28,25 @@
     <div class="container">
         <main>
             <h2>Välkommen</h2>
+            <p id="ingress">Skapa ett konto och logga in för att kunna skriva inlägg</p>
             <div class="form-container">
                 <h3>Skapa Konto</h3>
-                <form id="createAccount-form" method="post">
+                <div id="error-msg"></div>
+                <form id="create-account-form" method="post">
                     <label for="username">Användarnamn:</label>
-                    <input type="text" id="username" class="input-text" name="username" required>
+                    <input type="text" id="username" class="input-text" name="username">
 
                     <label for="firstName">Förnamn:</label>
-                    <input type="text" id="firstName" class="input-text" name="firstName" required>
+                    <input type="text" id="firstName" class="input-text" name="firstName">
 
                     <label for="lastName">Efternamn:</label>
-                    <input type="text" id="lastName" class="input-text" name="lastName" required>
+                    <input type="text" id="lastName" class="input-text" name="lastName">
 
                     <label for="email">E-post:</label>
-                    <input type="email" id="email" class="input-text" name="email" required>
+                    <input type="email" id="email" class="input-text" name="email">
 
                     <label for="password">Lösenord:</label>
-                    <input type="password" id="password" class="input-text" name="password" required>
+                    <input type="password" id="password" class="input-text" name="password">
 
                     <div class="btn-row">
                         <button type="submit" class="btn">Registrera</button>
