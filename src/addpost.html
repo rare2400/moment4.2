@@ -30,22 +30,21 @@
         <main>
             <h2>Skriv inlägg</h2>
             <div class="form-container">
+                <p id="error-msg"></p>
                 <form id="add-post" method="post">
                     <label for="title">Titel</label>
-                    <input type="text" id="title" class="input-text" name="title">
+                    <input type="text" id="title" class="input-text" name="title" placeholder="Titel">
 
                     <label for="content">Vad tänker du på?</label>
                     <textarea id="content" name="content" placeholder="Skriv något..."></textarea>
 
                     <label for="sign">Signera post</label>
-                    <input type="text" id="sign" class="input-text" name="sign">
+                    <input type="text" id="sign" class="input-text" name="sign" placeholder="Signatur">
 
                     <div class="btn-row">
                         <button type="submit" class="btn">Publicera</button>
                     </div>
                 </form>
-
-                <p id="error-msg"></p>
             </div>
 
         </main>
