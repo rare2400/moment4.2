@@ -48,6 +48,7 @@ async function loginUser(e) {
             const data = await response.json();
 
             localStorage.setItem("user-token", data.response.token);
+            localStorage.setItem("userId", data.response.user._id);
             window.location.href = "addpost.html";
 
         } else {
