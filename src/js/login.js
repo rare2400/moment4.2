@@ -36,7 +36,7 @@ async function loginUser(e) {
     }
 
     try {
-        const response = await fetch("http://127.0.0.1:3000/api/login", {
+        const response = await fetch("https://moment4-backend.onrender.com/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -48,7 +48,7 @@ async function loginUser(e) {
             const data = await response.json();
 
             localStorage.setItem("user-token", data.response.token);
-            localStorage.setItem("userId", data.response.user._id);
+            localStorage.setItem("userId", data.response.userId);
             window.location.href = "addpost.html";
 
         } else {
