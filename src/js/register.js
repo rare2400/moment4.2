@@ -8,14 +8,9 @@
 
 const createAccountForm = document.getElementById("create-account-form");
 
-window.onload = init;
-
-function init() {
     if (createAccountForm) {
         createAccountForm.addEventListener("submit", createAccount);
     }
-}
-
 
 async function createAccount(e) {
     e.preventDefault();
@@ -41,7 +36,7 @@ async function createAccount(e) {
     }
 
     try {
-        const response = await fetch("http://127.0.0.1:3000/api/register", {
+        const response = await fetch("https://moment4-backend.onrender.com/api/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
