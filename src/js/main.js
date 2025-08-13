@@ -69,6 +69,9 @@ async function displayPosts(data) {
         return;
     }
 
+    //sort post by newest first
+    data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
     data.forEach(post => {
         const postBox = document.createElement("div");
         postBox.classList.add("post-box");
