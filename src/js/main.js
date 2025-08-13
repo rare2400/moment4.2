@@ -49,7 +49,7 @@ function changeMenu() {
 //fetch posts from API
 async function fetchPosts() {
     try {
-        const response = await fetch("http://127.0.0.1:3000/api/posts")
+        const response = await fetch("https://moment4-backend.onrender.com/api/posts")
 
         if (response.ok) {
             const data = await response.json();
@@ -83,7 +83,7 @@ async function displayPosts(data) {
 
         title.textContent = post.title;
         content.textContent = post.content;
-        sign.textContent = post.sign;
+        sign.textContent = post.sign || "Anonym";
         date.textContent = new Date(post.createdAt).toLocaleDateString();
 
         signContentDiv.appendChild(sign);
