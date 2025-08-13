@@ -1,6 +1,6 @@
 # Frontend-applikation med användarhantering
-En enkelt frontend-applikation där användaren kan läsa inlägg och genom att skapa ett konto och logga in, kan skriva egna anonyma inlägg. Den använder HTML, 
-JavaScript, Parcel och SASS (SCSS), samt är kopplad till en RESTful webbtjänst. API:et erhåller data genom MongoDB som en dokumentdatabas (se [CV API](https://moment4-backend.onrender.com/api/posts) och [API repo](https://github.com/rare2400/Moment4.1) ). 
+En enkelt frontend-applikation där användaren kan läsa inlägg och genom att skapa ett konto och logga in, kan skriva egna anonyma inlägg [se publicerad applikation](https://rare2400-moment4.netlify.app/). Den använder HTML, 
+JavaScript, Parcel och SASS (SCSS), samt är kopplad till en RESTful webbtjänst. API:et erhåller data genom MongoDB som en dokumentdatabas (se [API](https://moment4-backend.onrender.com/api/posts) och [API repo](https://github.com/rare2400/Moment4.1) ). 
 
 ## Funktioner
 - Lista befintliga inlägg
