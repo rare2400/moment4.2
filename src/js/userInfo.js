@@ -22,7 +22,7 @@ async function fetchUserInfo(token, userId) {
     }
 
     try {
-        const response = await fetch(`http://127.0.0.1:3000/api/users/${userId}`, {
+        const response = await fetch(`https://moment4-backend.onrender.com/api/users/${userId}`, {
             method: "GET",
             headers: {
                 "authorization": "Bearer " + token
@@ -36,7 +36,7 @@ async function fetchUserInfo(token, userId) {
         const user = await response.json();
 
         //update DoOM with the userinfo
-        document.getElementById("welcome-msg").textContent = `Välkommen tillbaka ${user.firstName} ${user.lastName}`;
+        document.getElementById("welcome-msg").textContent = `Välkommen tillbaka ${user.firstName}!`;
 
         const userInfoElement = document.getElementById("user-info");
         userInfoElement.textContent = `Användarnamn: ${user.username}, E-post: ${user.email}`;
