@@ -6,18 +6,12 @@
 
 "use strict";
 
-
 const addPost = document.getElementById("add-post");
 
-window.onload = init;
-
-function init() {
-
-    if (addPost) {
-        addPost.addEventListener("submit", createPost);
-    } else {
-        console.log("addPost form not found");
-    }
+if (addPost) {
+    addPost.addEventListener("submit", createPost);
+} else {
+    console.log("addPost form not found");
 }
 
 //create a new post
@@ -31,7 +25,7 @@ async function createPost(e) {
     let errorMsg = document.getElementById("error-msg");
 
     //validate required input
-    if (!titleInput || !contentInput || !signInput) {
+    if (!titleInput || !contentInput) {
         errorMsg.textContent = "Fyll i titel och text till inlägget!";
         return;
     }
@@ -46,11 +40,11 @@ async function createPost(e) {
 
     //POST new post to API
     try {
-        const response = await fetch("http://127.0.0.1:3000/api/posts", {
+        const response = await fetch("https://moment4-backend.onrender.com/api/posts", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "authorization": "Bearer " + token
+                "Authorization": "Bearer " + token
             },
             body: JSON.stringify(post)
         });
